@@ -33,7 +33,7 @@ def count_cop(n):
     cop = 0
 
     for result in results: 
-        G = random_graph(matches, outcome)
+        G = random_graph(matches, result)
         if has_cop(G):
             cop += 1
 
