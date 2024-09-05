@@ -19,7 +19,7 @@ def random_graph(matches, result):
         else: 
             G.add_edge(B, A)
     return G
-
+# check if cop exists by equating length of cycle to number of nodes
 def has_cop(G):
     if nx.is_strongly_connected(G):
         for cycle in nx.simple_cycles(G):
@@ -27,6 +27,7 @@ def has_cop(G):
                 return True
     return False
 
+# Count cop
 def count_cop(n):
     matches, results = tournaments(n)
     cop = 0
@@ -38,6 +39,6 @@ def count_cop(n):
 
     return cop
 
-n = 8
+n = 7
 matches, results = tournaments(n)
 print(count_cop(n))
